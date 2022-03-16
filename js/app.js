@@ -13,11 +13,13 @@ const displayData = countries => {
 }
 
 const getCountryHtml = country =>{
-    console.log(country);
+    const {name, flags, area} = country;
     return`
         <div>
-        <h2>${country.name.common}</h2>
-        <img src="${country.flags.png}" >
+        <h2>${name.common}</h2>
+        <p>Area: ${area}</p>
+        <img src="${flags.png}" >
+        
         </div>
     `
 }
